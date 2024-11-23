@@ -19,7 +19,9 @@ pipeline {
         }
         stage('execute python') {
             steps {
-                bat python sample.py
+                bat '''
+                    python sample.py
+                '''
                 echo 'Python program executed Successfully!'
             }
         }
